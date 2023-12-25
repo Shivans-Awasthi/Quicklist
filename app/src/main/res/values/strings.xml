@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Quicklist</string>
+    <string name="example">Example</string>
+    <string name="enter_todo_title">Enter ToDo Title</string>
+    <string name="add_todo">ADD TODO</string>
+    <string name="delete_done">DELETE DONE</string>
+    <string name="string">+</string>
+    <string name="enter_task">Enter task</string>
+    <string name="add_task">Create Task</string>
+    <string name="my_tasks">My Tasks</string>
+    <string name="delete_completed">Delete Completed</string>
+    <string name="quote">\"Embrace the challenge, conquer the day, and celebrate your progress – every small step leads to a remarkable journey.\"</string>
+    <string name="schedule_notification">Schedule Notification</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="schedule_notificatifier">Schedule Notificatifier</string>
+    <string name="task_scheduler">Task Scheduler</string>
+    <string name="set_time">Set Time</string>
+    <string name="set_time2">Set Time</string>
+    <string name="set">Set</string>
+</resources>

@@ -3,11 +3,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="deletecolor">#B30F0F</color>
-    <color name="addcolor">#776BF1</color>
-    <color name="addcolor2">#FABB00</color>
-    <color name="hintcolor">#A0A0A8</color>
-    <color name="backcolor">#0C0B15</color>
-    <color name="backcolorlight">#242632</color>
-    <color name="backcolorlight2">#44495E</color>
-    <color name="checkcolor">#02E3A4</color>
+    <color name="workcolor">#D10454</color>
+    <color name="homecolor">#AE7735</color>
+    <color name="addcolor">#3A4BEC</color>
+<!--    <color name="addcolor2">#FB9D01</color>-->
+    <color name="addcolor2">#2556D7</color>
+    <color name="hintcolor">#B9B9C0</color>
+    <color name="backcolor">#2F3239</color>
+    <color name="backcolorlight">#15161A</color>
+    <color name="backcolorlight2">#26243D</color>
+    <color name="taskpendingcolor">#45BE6F</color>
+    <color name="checkcolor">#111212</color>
 </resources>

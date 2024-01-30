@@ -7,7 +7,7 @@
     <string name="string">+</string>
     <string name="enter_task">Enter task</string>
     <string name="add_task">Create Task</string>
-    <string name="my_tasks">My Tasks</string>
+    <string name="my_tasks">Create Tasks</string>
     <string name="delete_completed">Delete Completed</string>
     <string name="quote">\"Embrace the challenge, conquer the day, and celebrate your progress – every small step leads to a remarkable journey.\"</string>
     <string name="schedule_notification">Schedule Notification</string>
@@ -17,4 +17,8 @@
     <string name="set_time">Set Time</string>
     <string name="set_time2">Set Time</string>
     <string name="set">Set</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_date_time">Choose Time</string>
+    <string name="time">Time</string>
+    <string name="due_date_time"><![CDATA[Due Date & Time]]></string>
 </resources>

@@ -1,24 +1,45 @@
 <!-- res/layout/custom_time_picker.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/backcolor"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="10dp"
+    app:strokeWidth="3dp"
+    app:strokeColor="#AAFFFFFF"
+    android:background="#20FFFFFF"
+
+
+    >
 
     <TimePicker
         android:id="@+id/timePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foregroundTint="@color/backcolorlight2"
+        android:headerBackground="@color/backcolor"
+        android:numbersSelectorColor="@color/hintcolor"
+        android:background="@color/backcolor"
+        android:numbersBackgroundColor="@color/backcolor"
+
+
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSetTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:backgroundTint="@color/backcolorlight2"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/outfit_bold"
+        android:background="@drawable/button_round2"
+        android:backgroundTint="@color/addcolor2"
         android:text="@string/set"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:foreground="@drawable/click_ripple"
         android:textColor="@color/white"
 
         />
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

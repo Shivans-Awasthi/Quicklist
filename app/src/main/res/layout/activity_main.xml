@@ -9,129 +9,219 @@
     android:backgroundTintMode="screen"
     tools:context="com.example.quicklist.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvToDoItems"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layoutAnimation="@anim/layout_animation"
-        app:layout_constraintBottom_toTopOf="@+id/view"
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="Hi Shivans"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <!--    <TextView-->
+<!--        android:id="@+id/tvdatetoday"-->
+<!--        android:layout_width="383dp"-->
+<!--        android:layout_height="31dp"-->
+<!--        android:fontFamily="@font/lexenddeca_bold"-->
+<!--        android:text="Today Date"-->
+<!--        android:textColor="@color/hintcolor"-->
+<!--        android:textSize="15sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:layout_editor_absoluteY="100dp" />-->
+
+    <TextView
+        android:id="@+id/tvdatetoday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="0dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/outfit_regular"
+        android:textStyle="bold"
+        android:text="Date Today"
+        android:textAllCaps="false"
+        android:textColor="@color/hintcolor"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="70dp"
-        android:fontFamily="@font/lexenddeca_bold"
-        android:text="@string/my_tasks"
-        android:textColor="@color/white"
-        android:textSize="40sp"
+        android:id="@+id/tvnooftask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/outfit_bold"
+        android:text="Task Pending"
+        android:textAllCaps="true"
+        android:textColor="@color/taskpendingcolor"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btninfo"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/info_foreground"
-        android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/rvToDoItems"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/tvdatetoday" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/view"
-        android:layout_width="413dp"
-        android:layout_height="166dp"
+        android:id="@+id/backcardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/backcolor"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toTopOf="@+id/addcardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvnooftask">
+
+
+        <TextView
+            android:id="@+id/emptyStateImage"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/outfit_regular"
+            android:text="Empty slate, endless possibilities. Add your tasks and shape your day the way you want!"
+            android:textAlignment="center"
+            android:textColor="@color/hintcolor"
+            android:textSize="15sp"
+
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvToDoItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:transitionGroup="true"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:scrollbarSize="3dp"
+            android:layoutAnimation="@anim/layout_animation"
+            app:layout_constraintBottom_toTopOf="@+id/addcardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addcardView2" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+
+        android:background="@drawable/button_round2"
+        android:backgroundTint="@color/addcolor2"
+        android:drawableStart="@drawable/add_foreground"
+        android:drawablePadding="0dp"
+        android:foreground="@drawable/click_ripple"
+        android:elevation="10dp"
+        android:fontFamily="@font/lexenddeca_bold"
+        android:paddingStart="-19dp"
+        android:shadowColor="@color/addcolor2"
+        android:shadowRadius="30"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/addcardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addcardView" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addcardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="0dp"
         app:cardBackgroundColor="@color/backcolorlight"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:flow_verticalAlign="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/btnAddToDo"
-            android:layout_width="320dp"
-            android:layout_height="66dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="90dp"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/addcolor"
-            android:fontFamily="@font/lexenddeca_bold"
-            android:shadowColor="@color/black"
-            android:text="@string/add_task"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toTopOf="@+id/btnDeleteDoneToDo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            app:cardBackgroundColor="@color/backcolorlight2"
-            app:cardCornerRadius="20dp"
-            >
-
-            <EditText
-                android:id="@+id/etToDoTitle"
-                android:layout_width="match_parent"
-                android:layout_height="63dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="0dp"
-                android:backgroundTint="@color/white"
-                android:fontFamily="@font/lexenddeca_medium"
-                android:hint="@string/enter_task"
-                android:inputType="text"
-                android:textColor="@color/white"
-                android:background="@null"
-                android:textColorHint="@color/hintcolor"
-                app:layout_constraintBottom_toTopOf="@+id/btnAddToDo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/view" />
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/btnDeleteDoneToDo"
-            android:layout_width="66dp"
-            android:layout_height="66dp"
-            android:layout_marginHorizontal="335dp"
-            android:layout_marginTop="90dp"
-            android:layout_marginBottom="4dp"
-            android:backgroundTint="@color/deletecolor"
-            android:fontFamily="@font/quicksand_bold"
-            android:foreground="@drawable/delete_foreground"
-            android:textColor="@color/white"
-            android:textSize="25sp"
+        <ImageButton
+            android:id="@+id/btndelete"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/delete1"
+            android:foreground="@drawable/click_ripple"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvToDoItems"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/imgbtndeck"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/deck_foreground"
+            android:clickable="true"
+            android:foreground="@drawable/click_ripple"
+            android:focusable="true" />
+
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        app:constraint_referenced_ids="rvToDoItems" />
+    <!--    </LinearLayout>-->
+    <!--    <Button-->
+<!--        android:id="@+id/btnDeleteDoneToDo"-->
+<!--        android:layout_width="55dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="335dp"-->
+<!--        android:layout_marginEnd="28dp"-->
+<!--        android:layout_marginBottom="32dp"-->
+<!--        android:backgroundTint="@color/deletecolor"-->
+<!--        android:fontFamily="@font/quicksand_bold"-->
+<!--        android:foreground="@drawable/delete_foreground"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="25sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
